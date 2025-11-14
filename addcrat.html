@@ -6,6 +6,12 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
+
+    body {
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
     @keyframes pop {
       0% { transform: scale(0.5); opacity: 0; }
       100% { transform: scale(1); opacity: 1; }
@@ -21,11 +27,9 @@
 <body class="bg-gray-100 flex items-center justify-center h-screen">
 
   <div id="box"
-       class="bg-white p-10 shadow-xl rounded-2xl text-center w-96"
-       style="animation: pop 0.5s ease;">
+    class="bg-white p-10 shadow-xl rounded-2xl text-center w-96 animate-[pop_0.5s_ease]">
     
-    <!-- Checkmark -->
-    <div class="flex justify-center mb-6">
+    <div class="flex justify-center mb-6 animate-[fadeIn_1s_ease]">
       <div class="bg-green-600 p-4 rounded-full">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white"
              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
@@ -34,14 +38,16 @@
       </div>
     </div>
 
-    <h2 class="text-2xl font-bold mb-2 animate__fadeIn">Order Added Successfully!</h2>
+    <h2 class="text-2xl font-bold mb-2 animate-[fadeIn_1.2s_ease]">
+      Order Added Successfully!
+    </h2>
 
-    <p class="text-gray-600 mb-6" style="animation: fadeIn 1s;">
+    <p class="text-gray-600 mb-6 animate-[fadeIn_1.5s_ease]">
       Your product has been added to cart.
     </p>
 
     <button onclick="window.location.href='cart.html'"
-            class="w-full py-2 bg-blue-600 text-white rounded-lg shadow">
+            class="w-full py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
       Continue to Purchase
     </button>
 
