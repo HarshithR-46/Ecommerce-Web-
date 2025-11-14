@@ -5,37 +5,44 @@
   <title>Product Details</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <style>
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
   <script>
     function addToCart() {
-      window.location.href = "addcart.html";  // direct redirect
+      window.location.href = "addcart.html";
     }
   </script>
 </head>
 
-<body class="bg-gray-100 p-10">
+<body class="bg-gray-100 p-10 animate-[fadeSlide_0.6s_ease]">
 
-  <div class="max-w-4xl mx-auto bg-white p-6 shadow rounded-xl">
+  <div class="max-w-4xl mx-auto bg-white p-6 shadow-xl rounded-xl animate-[fadeSlide_1s_ease]">
 
     <img src="https://m.media-amazon.com/images/I/71xb2xkN5qL._SL1500_.jpg"
          class="w-full h-96 object-cover rounded" />
 
-    <h1 class="text-3xl font-bold mt-4">Product Name</h1>
-    <p class="text-gray-600 mt-2">Short description here...</p>
+    <h1 class="text-3xl font-bold mt-4">iPhone 15 Pro</h1>
+    <p class="text-gray-600 mt-2">128GB Model</p>
 
-    <p class="text-2xl font-bold mt-4">₹Price Here</p>
+    <p class="text-2xl font-bold mt-4">₹1,28,999</p>
 
     <button onclick="addToCart()"
-            class="mt-4 px-4 py-2 bg-blue-600 text-white rounded shadow">
+            class="mt-4 px-4 py-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition">
       Add to Cart
     </button>
 
     <button onclick="window.location.href='price-history.html'"
-            class="mt-4 ml-3 px-4 py-2 bg-green-600 text-white rounded shadow">
+            class="mt-4 ml-3 px-4 py-2 bg-green-600 text-white rounded shadow hover:bg-green-700 transition">
       View Price History
     </button>
 
     <button onclick="history.back()"
-            class="mt-4 ml-3 px-4 py-2 bg-gray-600 text-white rounded shadow">
+            class="mt-4 ml-3 px-4 py-2 bg-gray-600 text-white rounded shadow hover:bg-gray-700 transition">
       Back
     </button>
 
